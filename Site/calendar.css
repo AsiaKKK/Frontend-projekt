@@ -83,8 +83,13 @@
     border-radius: 15px;
     border-color: #f7d9d4cc;
     font-weight: 700;
+    text-transform: none;
     cursor: pointer;
     font-size: 14px;
+}
+.continue-btn a{
+    text-decoration: none;
+    color: white;
 }
 .calendar-table-row td button:hover{
     background-color: #f7d9d4cc;

@@ -108,7 +108,7 @@ hr{
     border-right-style: solid;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px; 
-    height: 200px;
+    height: 220px;
 
 }
 .img img{
@@ -117,9 +117,10 @@ hr{
     border-bottom-right-radius: 30px;
     border-right: none;
     width: 100%;
-    height: 184px;
+    height: 210px;
     object-fit: cover;
     object-position: center;
+    margin-right: 1.2vw;
 
 }
 .text-content{
@@ -127,6 +128,7 @@ hr{
     flex-direction: column;
     justify-content: space-between;
     margin: 10px ;
+    
     
 }
 .doctor-title{
@@ -140,7 +142,7 @@ hr{
 }
 .doctor-name{
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 2vmax;
     display: flex;
     justify-content: center;
 
@@ -149,7 +151,7 @@ hr{
     display: flex;
     flex-direction: row;
     font-family:'Open Sans', sans-serif ;
-    font-size: 13px;
+    font-size: 1.25vmax;
     text-transform: uppercase;
     align-items: center;
     justify-content: center;
@@ -166,7 +168,7 @@ hr{
     display: flex;
     flex-direction: row;
     font-family:'Open Sans', sans-serif ;
-    font-size: 13px;
+    font-size: 1.25vmax;
     text-transform: uppercase;
     align-items: center;
     justify-content: center;
@@ -319,3 +321,4 @@ hr{
     align-items: center;
     font-weight: 700;
 }
+
