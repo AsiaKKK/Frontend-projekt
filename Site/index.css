@@ -11,6 +11,7 @@
     width: 100%;
     background-color: white;
 
+
 }
 nav{
     display: flex;
@@ -93,6 +94,7 @@ hr{
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     width: 90%;
     margin: 0 auto;
     grid-gap:30px;
@@ -108,7 +110,7 @@ hr{
     border-right-style: solid;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px; 
-    height: 220px;
+    height: 230px;
 
 }
 .img img{
@@ -151,10 +153,12 @@ hr{
     display: flex;
     flex-direction: row;
     font-family:'Open Sans', sans-serif ;
-    font-size: 1.25vmax;
+    font-size: 14px;
     text-transform: uppercase;
-    align-items: center;
     justify-content: center;
+    margin: 5px auto;
+    text-align: center;
+    
 
 }
 .date-icon{
@@ -162,17 +166,18 @@ hr{
     height: max-content;
     size: cover;
     position: center;
-    margin-right: 4%;
+    margin-right: 3px
 }
 .date-fine{
     display: flex;
     flex-direction: row;
     font-family:'Open Sans', sans-serif ;
-    font-size: 1.25vmax;
+    font-size: 14px;
     text-transform: uppercase;
     align-items: center;
-    justify-content: center;
     font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
 
 }
 .date-icon-fine{
@@ -182,8 +187,8 @@ hr{
     position: center;
     
 }
-.booking-btn{
-    background-color: #f66f56;
+.booking-btn-green{
+    background-color: #02BC7D;
     border-style: solid;
     border-radius: 20px;
     border: none;
@@ -195,18 +200,41 @@ hr{
     text-transform: uppercase;
     cursor: pointer;
 }
-.booking-btn a{
+.booking-btn-green a{
     font-size: 12px;
     font-weight: 700;
     font-family: 'Open Sans', snas-serif;
     text-decoration: none;
     color: white;
 }
-.booking-btn:hover{
-    background-color:#02BC7D;
+.booking-btn-red {
+    background-color: #ed4c30;
+    border-style: solid;
+    border-radius: 20px;
+    border: none;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.booking-btn-red a {
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Open Sans', snas-serif;
+    text-decoration: none;
+    color: white;
+}
+.booking-btn-red:hover{
+    background-color:#882408;
+}
+.booking-btn-green:hover {
+    background-color: #12571b;
 }
 .info-container{
-    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -215,7 +243,7 @@ hr{
     width: 90%;
 }
 .info-container img{
-    width: 40px;
+    width: 50px;
     height: max-content;
    
 
@@ -297,6 +325,7 @@ hr{
 }
 .address{
     font-size: 18px;
+    text-align: center;
 }
 .address span{
     font-weight: 700;
@@ -322,3 +351,94 @@ hr{
     font-weight: 700;
 }
 
+@media screen and (max-width: 880px) {
+    .card-component{
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        gap: 10px;
+        width: 90%;
+    }
+    .grid{
+        justify-items: stretch;
+        grid-auto-rows: max-content;
+    }
+    .card-component{
+        height: auto;
+    }
+
+    .img{
+        width: 90%;
+        margin: 2% auto;
+    }
+    .text-content{
+        text-align: center;
+        display: flex;
+        height: 150px;
+        justify-content: space-between;
+    }
+    .date{
+        font-size: 11px;
+    }
+    .date-fine{
+        font-size: 11px;
+    }
+    .doctor-name{
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width:565px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .card-component{
+        width: 70%;
+        margin: 10px auto;
+
+    } 
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 95%;
+    }
+    li {
+        width: 100%;
+        text-align: center;
+        border-bottom-style: solid;
+        border-bottom-color: #1b5175;
+        border-width: 1px;
+        padding: 5px;
+    }
+    .info-container{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+    .info{
+        font-size: 14px;
+    }
+    .info-container img{
+        transform: rotate(90deg);
+    }
+    .info img{
+        transform: rotate(0deg);
+    }
+    .stats-container{
+        font-size: 14px;
+    }
+    .header-text{
+        font-size: 20px;
+    }
+    .footer-container{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
