@@ -11,7 +11,9 @@
   <body>
     <div class="nav-bar">
       <nav>
-        <img id="logo" src="../images/logo1.jpg" alt="" srcset="" />
+        <a href="./main-page.html"
+          ><img id="logo" src="../images/logo1.jpg" alt="" srcset=""
+        /></a>
         <ul>
           <li><a href="./main-page.html">Strona główna</a></li>
           <li><a href="#">O nas</a></li>
@@ -41,23 +43,23 @@
           </tr>
           <tr>
             <td class="typ">data</td>
-            <td class="dane">xx.xx.xxx-dzien</td>
+            <td class="dane" id="data">.xxx-dzien</td>
           </tr>
           <tr>
             <td class="typ">Godzina</td>
-            <td class="dane">xx.xx</td>
+            <td class="dane" id="godzina">xx.xx</td>
           </tr>
           <tr>
             <td class="typ">Lekarz</td>
-            <td class="dane">lek. med. xxx xxx</td>
+            <td class="dane" id="doctor-name"></td>
           </tr>
           <tr>
             <td class="typ">Cel</td>
-            <td class="dane">tekst</td>
+            <td class="dane" id="cel">tekst</td>
           </tr>
           <tr>
             <td class="typ">Cena</td>
-            <td class="dane">xxx</td>
+            <td class="dane" id="cena">xxx</td>
           </tr>
           <tr>
             <td class="typ">Miejsce</td>
@@ -66,13 +68,34 @@
         </table>
         <p>*Płatność tylko na miejscu</p>
       </div>
+
+      <script>
+        const imie = localStorage.getItem("imie");
+        document.getElementById("doctor-name").innerText = imie;
+        const cel = localStorage.getItem("cel");
+        document.getElementById("cel").innerText = cel;
+        const cena = localStorage.getItem("koszt");
+        document.getElementById("cena").innerText = cena;
+        const data = localStorage.getItem("data");
+        document.getElementById("data").innerText = data;
+        const czas = localStorage.getItem("czas");
+        document.getElementById("godzina").innerText = czas;
+      </script>
+
       <div class="end-container">
         <p>Dziękujemy za dokonanie rezerwacji!</p>
         <p>
           W razie braku możliwości przyjścia na wizytę prosimy o anulowanie
           rezerwacji co najmniej dwa dni przed
         </p>
-        <button>Anuluj</button>
+        <a href="./main-page.html"
+          ><button onclick="wizyta()">Anuluj</button></a
+        >
+        <script>
+          function wizyta() {
+            alert("ANULOWANO WIZYTĘ");
+          }
+        </script>
       </div>
       <footer>
         <div class="footer-container">
@@ -84,21 +107,25 @@
           <div class="social-media">
             <h4>Znajdź nas:</h4>
             <div class="social-media-img">
-              <a href="https://www.instagram.com/"
+              <a href="https://www.instagram.com/" target="_blank"
                 ><img src="../images/instagram.png" alt=""
               /></a>
-              <a href="https://www.facebook.com/"
+              <a href="https://www.facebook.com/" target="_blank"
                 ><img src="../images/facebook.png" alt=""
               /></a>
-              <a href="https://twitter.com/?lang=pl"
+              <a href="https://twitter.com/?lang=pl" target="_blank"
                 ><img src="../images/twitter.png" alt=""
               /></a>
             </div>
           </div>
           <div class="links">
             <h4>Przydatne linki:</h4>
-            <a href="https://www.nfz.gov.pl/">NFZ-Narodowy Fundusz Zdrowia</a>
-            <a href="https://www.gov.pl/web/zdrowie">Ministerstwo Zdrowia</a>
+            <a href="https://www.nfz.gov.pl/" target="_blank"
+              >NFZ-Narodowy Fundusz Zdrowia</a
+            >
+            <a href="https://www.gov.pl/web/zdrowie" target="_blank"
+              >Ministerstwo Zdrowia</a
+            >
           </div>
           <div class="chat">
             <img src="../images/chat.png" />

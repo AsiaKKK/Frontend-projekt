@@ -11,8 +11,18 @@
     <title>Strona główna</title>
     <link rel="stylesheet" href="./index.css" type="text/css" />
   </head>
-
   <body>
+    <script>
+      function lekarz(a, imie) {
+        const lekarza = "lekarz" + a;
+        const imiee = imie;
+        localStorage.setItem("lek", lekarza);
+        localStorage.setItem("imie", imiee);
+        localStorage.setItem("btn", a);
+        localStorage.setItem("clean", "clean");
+      }
+    </script>
+
     <div class="nav-bar">
       <nav>
         <img id="logo" src="../images/logo1.jpg" alt="" srcset="" />
@@ -47,17 +57,16 @@
             </div>
             <div class="text-content">
               <p class="doctor-title">Pediatra</p>
-              <p class="doctor-name">lek. med. Marek Cichoń</p>
-              <div class="date-fine">
-                <img
-                  class="date-icon-fine"
-                  src="../images/green-icon.jpg"
-                  alt=""
-                />
-                <p>Wolne terminy w tym tygodniu</p>
+              <p class="doctor-name-1">lek. med. Marek Cichoń</p>
+              <div class="date">
+                <img class="date-icon" src="../images/red-x.png" alt="" />
+                <p>Brak wolnych terminów w tym tygodniu</p>
               </div>
-              <button class="booking-btn-green">
-                <a href="calendar.html">Zarezerwuj</a>
+              <button
+                class="booking-btn-red"
+                onclick="lekarz(1, 'lek. med. Marek Cichoń')"
+              >
+                <a href="calendar.html">Zobacz inne wolne terminy</a>
               </button>
             </div>
           </div>
@@ -67,7 +76,9 @@
             </div>
             <div class="text-content">
               <p class="doctor-title">lekarz rodzinny</p>
-              <p class="doctor-name">lek. med. Julia Dąbrowska</p>
+              <p class="doctor-name-2" id="doctor-name-2">
+                lek. med. Julia Duda
+              </p>
               <div class="date-fine">
                 <img
                   class="date-icon-fine"
@@ -76,7 +87,10 @@
                 />
                 <p>Wolne terminy w tym tygodniu</p>
               </div>
-              <button class="booking-btn-green">
+              <button
+                class="booking-btn-green"
+                onclick="lekarz(2,'lek. med. Julia Duda')"
+              >
                 <a href="calendar.html">Zarezerwuj</a>
               </button>
             </div>
@@ -87,13 +101,16 @@
             </div>
             <div class="text-content">
               <p class="doctor-title">Pediatra</p>
-              <p class="doctor-name">lek. med. Michał Klich</p>
+              <p class="doctor-name-3">lek. med. Michał Klich</p>
               <div class="date">
                 <img class="date-icon" src="../images/red-x.png" alt="" />
-                <p>Brak wolnych terminów tym tygodniu</p>
+                <p>Brak wolnych terminów w tym tygodniu</p>
               </div>
-              <button class="booking-btn-red">
-                <a href="calendar.html"> Zobacz inne terminy </a>
+              <button
+                class="booking-btn-red"
+                onclick="lekarz(3, 'lek. med. Michał Klich')"
+              >
+                <a href="calendar.html"> Zobacz inne wolne terminy </a>
               </button>
             </div>
           </div>
@@ -103,13 +120,20 @@
             </div>
             <div class="text-content">
               <p class="doctor-title">Lekarz rodzinny</p>
-              <p class="doctor-name">lek. med. Daria Bak</p>
-              <div class="date">
-                <img class="date-icon" src="../images/red-x.png" alt="" />
-                <p>Brak wolnych terminów w tym tygodniu</p>
+              <p class="doctor-name-4">lek. med. Daria Bak</p>
+              <div class="date-fine">
+                <img
+                  class="date-icon-fine"
+                  src="../images/green-icon.jpg"
+                  alt=""
+                />
+                <p>Wolne terminy w tym tygodniu</p>
               </div>
-              <button class="booking-btn-red">
-                <a href="calendar.html">Zobacz inne terminy</a>
+              <button
+                class="booking-btn-green"
+                onclick="lekarz(4, 'lek. med. Daria Bak')"
+              >
+                <a href="calendar.html">Zarezerwuj</a>
               </button>
             </div>
           </div>
