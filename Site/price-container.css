@@ -29,7 +29,7 @@
     align-items: center;
 }
 .price-table-row button{
-    background-color: #f66f56;
+    background-color: #02BC7D;
     border: none ;
     border-style: solid;
     border-radius: 20px;
@@ -39,8 +39,7 @@
     text-transform: uppercase;
 }
 .price-table-row button:hover{
-    background-color: #fc9d8c;
-    color: black; 
+    background-color: #12571b;; 
     font-size: larger;
     border:4px;
 }
